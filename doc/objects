@@ -1,5 +1,5 @@
 Tour:
-  -> items
+  -> item_deliveries
   -> order_state
   - started_at
   - finished_at
@@ -12,7 +12,7 @@ Order:
   - destination_address
 
 Item:
-  <- tours
+  <- item_delivery
   -> item_state
   - item
   - count
@@ -24,7 +24,7 @@ ItemState:
   - description
   - comment
 
-  # (Initiated, InProgress, Delivered, Rejected, Unavailable, Other)
+  # (Initiated, InProgress, Completed, Rejected, Unavailable, Other)
 
 OrderState:
   <- orders
@@ -41,3 +41,13 @@ OrderState:
   - comment
 
   # (Initiated, InProgress, Completed)
+
+ItemDelivery
+  <- tour 
+  -> item
+  -> item_delivery_state
+
+ItemDeliveryState:
+  <- item_delivery
+
+  # (Initiated, InProgress, Completed, Rejected, Unavailable, Other)
