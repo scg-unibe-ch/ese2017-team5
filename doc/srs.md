@@ -113,9 +113,18 @@ An Item is one ore more physical objects of the same type.
 
 Tracking of states must happen on a per-item basis.
 
+#### Relations
+
+- Items belong to an order.
+- Items are part of a delivery tour.
+
 ### Order
 
 An order is a collection of items which were bought together.
+
+#### Relations
+
+- Orders consist of items.
 
 #### Management
 
@@ -131,6 +140,11 @@ Tours must have fields for:
 - The date the tour is for
 - A time estimate
 - The time it actually took
+
+#### Relations
+
+- Tours are assigned to a driver.
+- Tours contain multiple items.
 
 #### Management
 
@@ -155,4 +169,10 @@ Tours must have fields for:
 - The system must be able to compare the time estimate with the actual time it took.
   - It must be able to automatically report tours where the difference is more than a configurable value.
 
-## Non-Functional Requirements
+### Drivers
+
+A driver represents an employee driving delivery vans.
+
+#### Management
+
+- It must be possible to add, modify and delete drivers.
