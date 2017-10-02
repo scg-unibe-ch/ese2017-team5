@@ -3,7 +3,7 @@
 
 # Introduction
 
-## Purposee
+## Purpose
 
 The following document shall serve to formally specify the requirements of an
 application created as part of the 2017 ESE lecture at the university of Bern.
@@ -54,45 +54,48 @@ of all functionality the application must fulfill.
 
 #### Creating new items and order
 
-As a logistics manager, I want to register new orders, consisting of multiple items, in the system.
+- As a logistics manager, I want to register new orders, consisting of multiple
+  items, in the system.
 
 #### Modifying items and order
 
-I want to be able to modify items, and the orders they're assigned to, after they're created.
+- I want to be able to modify items, and the orders they're assigned to, after
+  they're created.
 
 #### Viewing pending orders
 
-As a logistics manager, I want to be able to view all orders where there are
-non-fulfilled items, so I can plan tours.
+- As a logistics manager, I want to be able to view all orders where there are
+  non-fulfilled items, so I can plan tours.
 
 ### Tours
 
 #### Creating new tours
 
-As a logistics manager, I want to create new delivery tours, consisting of
-multiple items which to deliver.
+- As a logistics manager, I want to create new delivery tours, consisting of
+  multiple items which to deliver.
 
-When creating a new tour, I want to be able to select all items which were not
-delivered yet, or for which delivery failed.
+- When creating a new tour, I want to be able to select all items which were
+  not delivered yet, or for which delivery failed.
 
 #### Starting & ending tour
 
-As a driver, I want to update the system when I start and end the tour.
+- As a driver, I want to update the system when I start and end the tour.
 
 #### Tracking items during tour
 
-As a driver I want to be able to update - for each item - whether I was able to
-deliver the item or not.
-If delivery failed, I want to be able to indicate exactly why it failed.
+- As a driver I want to be able to update - for each item - whether I was able
+  to deliver the item or not.
+- If delivery failed, I want to be able to indicate exactly why it failed.
 
 #### Tracking of fulfillment time
 
-As a logistics manager I want the system to automatically track how long each
-tour took. That is, the time between the driver starting, and ending, the tour.
+- As a logistics manager I want the system to automatically track how long each
+  tour took. That is, the time between the driver starting, and ending, the tour.
 
 ### Reporting
 
-As a logistics manager I want to be able to compare the estimated with the actual duration of a tour, in order to investigate outliers.
+- As a logistics manager I want to be able to compare the estimated with the
+  actual duration of a tour, in order to investigate outliers.
 
 ## User Characteristics
 
