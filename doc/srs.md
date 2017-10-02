@@ -107,20 +107,50 @@ which they are involved with.
 
 ### Item
 
-#### Structure
+An Item is one ore more physical objects of the same type.
 
-| Attribute  | Type     | Required | Comment          |
-| ---------- | -------- | -------- | ---------------- |
-| name       | String   | y        | Item name        |
-| count      | Int      | y        | Item count       |
-| comment    | String   | n        | Optional comment |
-| item_state | Relation | y        | Item's state     |
+Tracking of states must happen on a per-item basis.
 
 ### Order
 
-#### Structure
+An order is a collection of items which were bought together.
 
-| Attribute  | Type     | Required | Comment          |
-| ---------- | -------- | -------- | ---------------- |
+#### Management
+
+- Logistics manager have to be able to see all pending orders.
+
+### Tour
+
+A tour is an attempt to deliver multiple items to their recipients.
+
+#### Attributes
+
+Tours must have fields for:
+- The date the tour is for
+- A time estimate
+- The time it actually took
+
+#### Management
+
+- Logistics managers must be able to create tours containing:
+  - Not yet delivered items
+  - Items for which delivery failed
+
+- The system must be able to automatically assemble some tours.
+  - CUSTOMER: How? Location? Time? Time estimate?
+
+#### Execution
+
+- Drivers must see their assigned tours of the next few days.
+
+- During execution of a tour:
+  - Drivers must be able to update the system when they start a tour
+  - Drivers must be able to update the system whether they managed / failed to deliver an item.
+  - Drivers must be able to update the system when the tour is finished.
+
+#### Reporting
+
+- The system must be able to compare the time estimate with the actual time it took.
+  - It must be able to automatically report tours where the difference is more than a configurable value.
 
 ## Non-Functional Requirements
