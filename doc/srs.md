@@ -54,7 +54,7 @@ of all functionality the application must fulfill.
 
 #### Creating new items and order
 
-I want to be able to create new orders and items, and assign multiple items to an order.
+As a logistics manager, I want to register new orders, consisting of multiple items, in the system.
 
 #### Modifying items and order
 
@@ -62,35 +62,37 @@ I want to be able to modify items, and the orders they're assigned to, after the
 
 #### Viewing pending orders
 
-I want to be able to view all pending orders - that is, orders in which not all items have been fulfilled.
+As a logistics manager, I want to be able to view all orders where there are
+non-fulfilled items, so I can plan tours.
 
 ### Tours
 
 #### Creating new tours
 
-I want to be able to schedule a tour, consisting of multiple items which are to be delivered.
+As a logistics manager, I want to create new delivery tours, consisting of
+multiple items which to deliver.
 
-For each such tour, I want to specify the estimated fulfillment time.
+When creating a new tour, I want to be able to select all items which were not
+delivered yet, or for which delivery failed.
 
-#### Starting tour
+#### Starting & ending tour
 
-When starting the tour, I want to be able to update the system accordingly.
+As a driver, I want to update the system when I start and end the tour.
 
 #### Tracking items during tour
 
-When having delivered - or having failed to deliver - an item, I want to be
-able to update this information via my mobile phone.
+As a driver I want to be able to update - for each item - whether I was able to
+deliver the item or not.
+If delivery failed, I want to be able to indicate exactly why it failed.
 
 #### Tracking of fulfillment time
 
-The system should automatically track how long it took to complete a tour. That
-is, the time between the driver starting the tour, and the final item being
-delivered.
+As a logistics manager I want the system to automatically track how long each
+tour took. That is, the time between the driver starting, and ending, the tour.
 
 ### Reporting
 
-I want to be able to generate a report which compares - for each tour - the
-estimated vs the actual fulfillment time.
+As a logistics manager I want to be able to compare the estimated with the actual duration of a tour, in order to investigate outliers.
 
 ## User Characteristics
 
