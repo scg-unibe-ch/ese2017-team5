@@ -11,11 +11,11 @@ application created as part of the 2017 ESE lecture at the university of Bern.
 It is intended to be read by any atendees of said course, as well as by the
 teaching assistants.
 
-This product will hereafter by referred to by its name: TODO.
+This product will hereafter be referred to by its name: TODO.
 
 ## Stakeholders
 
-- 'Developers': ESE Team 5 (Pascal Gerig, Irvin Hofstetter, Michael Senn, Marcel Zauder)
+- 'Developers': ESE Team 5 (Pascal Gerig, Irvin Hostetter, Michael Senn, Marcel Zauder)
 - 'Customer': Teaching assistants
 
 ## Definitions
