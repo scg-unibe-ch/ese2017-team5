@@ -50,6 +50,8 @@ database backend.
 The following section shall provide a high-level business-orientied listing
 of all functionality the application must fulfill.
 
+![Use Cases](assets/dia1.png)
+
 ### Items & Orders
 
 #### Creating new items and order
@@ -105,6 +107,9 @@ not.
 
 All users will be familiar with those parts of the company's logistics workflow
 which they are involved with.
+
+## Event-driven process chain Diagram
+![EPC](assets/dia2.png)
 
 # Specific Requirements
 
