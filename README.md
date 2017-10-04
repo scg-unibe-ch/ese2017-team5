@@ -2,4 +2,4 @@
 
 Bliblablo.
 
-![Bild](doc/assets/.gif)
+![Bild](doc/assets/yeah.gif)
