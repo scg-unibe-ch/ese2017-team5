@@ -2,4 +2,4 @@
 
 Bliblablo.
 
-![Bild](https://media.giphy.com/media/zQinMHnDYiNnq/giphy.gif)
+![Bild](https://i.giphy.com/zQinMHnDYiNnq.gif)
