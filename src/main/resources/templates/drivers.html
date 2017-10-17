@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drivers</title>
+  </head>
+  <body>
+    <div>
+      <h1>Drivers</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="driver : ${drivers} ">
+            <td th:text="${ driver.getId()}">1</td>
+            <td th:text="${ driver.getName()}">George</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

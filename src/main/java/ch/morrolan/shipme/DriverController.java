@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.ui.Model;
+
 import ch.morrolan.shipme.Driver;
 import ch.morrolan.shipme.DriverRepository;
 
@@ -25,7 +27,8 @@ public class DriverController {
 	}
 
 	@GetMapping(path="/all")
-	public @ResponseBody Iterable<Driver> getAllDrivers() {
-		return driverRepository.findAll();
+	public String getAllDrivers(Model model) {
+		model.addAttribute("drivers", driverRepository.findAll());
+		return "drivers";
 	}
 }

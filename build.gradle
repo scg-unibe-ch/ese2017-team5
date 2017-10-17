@@ -46,7 +46,7 @@ dependencies {
 
     // Sane views
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+    //compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
 
     // Dev tools
     compile("org.springframework.boot:spring-boot-devtools")
