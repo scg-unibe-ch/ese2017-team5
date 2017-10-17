@@ -7,6 +7,8 @@ Bliblablo.
 ## Getting started
 
 - Clone repository
-- Install gradle
-- Compile application, build uber-jar: `gradle build`
-- Run application: `java -jar build/libs/shipme-$VERSION.jar`
+- Configure database server
+- Configure database settings in `application.properties`
+- In one terminal: `./gradlew build --continuous`, this will watch for changes and recompile the application whenever it changed.
+- In a second terminal: `./gradlew bootRun`, this will run a development version of the server which automatically restarts if something changed.
+- Open http://localhost:8080
