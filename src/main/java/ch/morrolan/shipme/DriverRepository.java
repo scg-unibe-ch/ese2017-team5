@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 
 import ch.morrolan.shipme.Driver;
 
-public interface DriverRepository extends CrudRepository<Driver, Long> {
+public interface DriverRepository extends CrudRepository<Driver, Integer> {
 }
