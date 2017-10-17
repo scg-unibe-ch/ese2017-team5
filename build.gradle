@@ -7,6 +7,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -29,6 +33,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
     }
+    // Jetty app server
     compile("org.springframework.boot:spring-boot-starter-jetty")
     // end::jetty[]
     // tag::actuator[]
@@ -38,6 +43,13 @@ dependencies {
     // MySQL-based persistency layer
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("mysql:mysql-connector-java")
+
+    // Sane views
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    //compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+
+    // Dev tools
+    compile("org.springframework.boot:spring-boot-devtools")
 
     testCompile("junit:junit")
 }

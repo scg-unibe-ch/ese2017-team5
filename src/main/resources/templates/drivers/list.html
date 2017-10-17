@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drivers</title>
+  </head>
+  <body>
+    <div>
+      <h1>Drivers</h1>
+      <a th:href="@{/drivers/new}">Add new driver</a>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>#</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="driver : ${drivers} ">
+            <td th:text="${ driver.getId()}">1</td>
+            <td th:text="${ driver.getName()}">George</td>
+            <td>
+              <a th:href="@{/drivers/{id}/delete/(id=${ driver.getId() })}">
+                Delete Driver
+                </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
