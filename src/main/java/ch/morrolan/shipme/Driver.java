@@ -6,6 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+/**
+ * Simulates a Driver, having a name and a ID
+ */
 public class Driver {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

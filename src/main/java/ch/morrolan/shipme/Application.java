@@ -13,8 +13,14 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 @Configuration
+/**
+* Contains #main method, which starts the entire application
+*/
 public class Application {
 
+    /**
+    Starts the entire "Ship Me" application
+     */
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
