@@ -3,6 +3,6 @@ package ch.morrolan.shipme;
 /**
  * Created by pascal on 22.10.17.
  */
-public enum BoxModel implements IModel {
-    Scania;
+public enum VanModel implements IModel {
+    VW;
 }

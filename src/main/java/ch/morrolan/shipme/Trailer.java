@@ -6,6 +6,7 @@ package ch.morrolan.shipme;
 public class Trailer implements ITruck {
 
     //Amount of palettes that fit into the Trailer
+    private static int counter = 0;
     private final int KOEGEL_AMOUNT = 32;
     private final int SCHMITZ_AMOUNT = 34;
     private final int SCHWARZMÜLLER_AMOUNT = 34;
@@ -17,5 +18,49 @@ public class Trailer implements ITruck {
 
     private TrailerModel model;
     private int paletteAmount;
+    private float weight;
+    private int id;
 
+    public Trailer(TrailerModel model)
+    {
+        counter++;
+        this.id = counter;
+        this.model = model;
+        if(this.model == TrailerModel.Koegel)
+        {
+            this.paletteAmount = KOEGEL_AMOUNT;
+            this.weight = KOEGEL_WEIGHT;
+        }
+        else if (this.model == TrailerModel.Schmitz)
+        {
+            this.paletteAmount = SCHMITZ_AMOUNT;
+            this.weight = SCHMITZ_WEIGHT;
+        }
+
+        else
+        {
+            this.paletteAmount = SCHWARZMÜLLER_AMOUNT;
+            this.weight = SCHWARZMÜLLER_WEIGHT;
+        }
+    }
+
+    @Override
+    public int getID() {
+        return this.id;
+    }
+
+    @Override
+    public IModel getModel() {
+        return this.model;
+    }
+
+    @Override
+    public int getPaletteAmount() {
+        return this.paletteAmount;
+    }
+
+    @Override
+    public float getWeight() {
+        return this.weight;
+    }
 }
