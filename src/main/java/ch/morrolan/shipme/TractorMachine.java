@@ -1,18 +1,21 @@
 package ch.morrolan.shipme;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by pascal on 22.10.17.
  */
 public class TractorMachine implements ITruck {
-    private static int counter = 0;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private float weight;
     private TractorMachineModel model;
 
     public TractorMachine(TractorMachineModel model)
     {
-        counter++;
-        this.id = counter;
         this.model = model;
         this.weight = 0;
     }

@@ -1,11 +1,16 @@
 package ch.morrolan.shipme;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by pascal on 22.10.17.
  * A Truck is a TractorMachine and a trailer
  */
 public class Truck implements ITruck{
-    private static int counter = 0;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private TractorMachine machine;
     private Trailer trailer;
@@ -13,8 +18,6 @@ public class Truck implements ITruck{
     public Truck(TractorMachine machine, Trailer trailer)
     {
         assert (machine != null && trailer != null);
-        counter++;
-        this.id = counter;
         this.machine = machine;
         this.trailer = trailer;
     }

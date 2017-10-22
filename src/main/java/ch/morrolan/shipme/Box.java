@@ -1,10 +1,13 @@
 package ch.morrolan.shipme;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by pascal on 22.10.17.
  */
 public class Box implements ITruck {
-    private static int counter = 0;
 
     //Amount of palettes that fit into the Trailer
     private final int SCANIA_AMOUNT = 18;
@@ -13,14 +16,14 @@ public class Box implements ITruck {
     private final float SCANIA_WEIGHT = (float)12;
 
     private BoxModel model;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private int paletteAmount;
     private float weight;
 
     public Box(BoxModel model)
     {
-        counter++;
-        this.id = counter;
         this.model = model;
         if(model == BoxModel.Scania)
         {

@@ -1,12 +1,15 @@
 package ch.morrolan.shipme;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by pascal on 22.10.17.
  */
 public class Trailer implements ITruck {
 
     //Amount of palettes that fit into the Trailer
-    private static int counter = 0;
     private final int KOEGEL_AMOUNT = 32;
     private final int SCHMITZ_AMOUNT = 34;
     private final int SCHWARZMÜLLER_AMOUNT = 34;
@@ -19,12 +22,13 @@ public class Trailer implements ITruck {
     private TrailerModel model;
     private int paletteAmount;
     private float weight;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
 
     public Trailer(TrailerModel model)
     {
-        counter++;
-        this.id = counter;
+        assert model != null;
         this.model = model;
         if(this.model == TrailerModel.Koegel)
         {
