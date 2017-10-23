@@ -6,5 +6,5 @@ import ch.morrolan.shipme.ITruck;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TruckRepository extends CrudRepository<ITruck, Integer> {
+public interface TruckRepository extends CrudRepository<VehicleType, Integer> {
 }

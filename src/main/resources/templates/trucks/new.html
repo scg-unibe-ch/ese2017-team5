@@ -11,17 +11,20 @@
       <h1>New Truck</h1>
       <form action="/trucks/new" method="post">
         <label>Model</label>
-        <select>
-          <option value="ScaniaT">Scania S 450 B6x4NA (Tractor Machine)</option>
-          <option value="Daf">DAF XF EURO 6 (Tractor Machine)</option>
-          <option value="MercedesBenz">Mercedes-Benz Actros (Tractor Machine)</option>
-          <option value="Schmitz">Schmitz-Cargobull S.PR+ (Trailer)</option>
-          <option value="Koegel">Koegel XT.3 (Trailer)</option>
-          <option value="Schwarzmüller">Schwarzmüller 34P (Trailer)
-          <option value="ScaniaB">Scania S 450 B6x4NB (Box)</option>
-          <option value="VW">VW Transporter T1 (Van)</option>
-        </select>
+        <input type="text" name="model" value="Enter Modelname"/>
+        <label>Weight</label>
+        <input type="text" name="weight" value="Enter Weight"/>
+        <label>Amount of palettes</label>
+        <input type="text" name="paletteAmount" value="Enter palettes capacity"/>
+        <label>Can Vehicle drive on its own?</label>
+        <!--select name="canDrive">
+          <option value="TRUE">yes</option>
+          <option value="FALSE">no</option>
+
+        </select-->
+
         <input type="submit" value="Create"/>
+
       </form>
     </div>
   </body>

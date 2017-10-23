@@ -19,7 +19,8 @@ import ch.morrolan.shipme.DriverRepository;
 
 @Controller
 @RequestMapping(path="/trucks")
-public class TruckController {
+public class VehicleTypeController {
+
     @Autowired
     private TruckRepository truckRepository;
 
@@ -29,8 +30,14 @@ public class TruckController {
     }
     
     @RequestMapping(path="/new", method=RequestMethod.POST)
-    public ModelAndView addNewTruck (@RequestParam String model) {
-        ITruck truck;
+    public ModelAndView addNewTruck (@RequestParam String model, @RequestParam int weight, @RequestParam int paletteAmount/*, @RequestParam boolean canDrive*/) {
+
+
+        VehicleType vehicle = new VehicleType(model, weight, paletteAmount, true);
+        truckRepository.save(vehicle);
+        return new ModelAndView("redirect:all");
+/*
+               ITruck truck;
 
         if(model.equals("VW"))
         {
@@ -78,7 +85,7 @@ public class TruckController {
         }
         truckRepository.save(truck);
         //return new ModelAndView(new RedirectView("all", true, false));
-        return new ModelAndView("redirect:all");
+        return new ModelAndView("redirect:all");*/
     }
 
     @GetMapping(path="/all")
@@ -88,7 +95,7 @@ public class TruckController {
 
     @GetMapping(path="/{id}/delete")
     public ModelAndView deleteTruck(@PathVariable Integer id) {
-        ITruck truck = truckRepository.findOne(id);
+        VehicleType truck = truckRepository.findOne(id);
         if (truck != null) {
             truckRepository.delete(truck);
         }
