@@ -1,0 +1,36 @@
+<!--
+  List of Trucks
+-->
+<html>
+  <head>
+    <title>Drivers</title>
+  </head>
+  <body>
+    <div>
+      <h1>Drivers</h1>
+      <a th:href="@{/trucks/new}">Add new trucks</a>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>#</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="truck : ${trucks} ">
+            <td th:text="${ truck.getId()}">1</td>
+            <td th:text="${ truck.getModel()}">VW</td>
+            <td th:text="${ truck.getPaletteAmount()}">10</td>
+            <td th:text="${ truck.getWeight()}">10</td>
+            <td>
+              <a th:href="@{/trucks/{id}/delete/(id=${ truck.getId() })}">
+                Delete Truck
+                </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

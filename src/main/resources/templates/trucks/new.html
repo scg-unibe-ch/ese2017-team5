@@ -1,0 +1,28 @@
+<!--
+  Form to gather a new Truck
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Truck</title>
+  </head>
+  <body>
+    <div>
+      <h1>New Truck</h1>
+      <form action="/trucks/new" method="post">
+        <label>Model</label>
+        <select>
+          <option value="ScaniaT">Scania S 450 B6x4NA (Tractor Machine)</option>
+          <option value="Daf">DAF XF EURO 6 (Tractor Machine)</option>
+          <option value="MercedesBenz">Mercedes-Benz Actros (Tractor Machine)</option>
+          <option value="Schmitz">Schmitz-Cargobull S.PR+ (Trailer)</option>
+          <option value="Koegel">Koegel XT.3 (Trailer)</option>
+          <option value="Schwarzmüller">Schwarzmüller 34P (Trailer)
+          <option value="ScaniaB">Scania S 450 B6x4NB (Box)</option>
+          <option value="VW">VW Transporter T1 (Van)</option>
+        </select>
+        <input type="submit" value="Create"/>
+      </form>
+    </div>
+  </body>
+</html>
